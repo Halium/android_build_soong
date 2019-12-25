@@ -115,7 +115,7 @@ func Build(ctx Context, config Config, what int) {
 	}
 
 	// Start getting java version as early as possible
-	getJavaVersions(ctx, config)
+	//getJavaVersions(ctx, config)
 
 	// Make sure that no other Soong process is running with the same output directory
 	buildLock := BecomeSingletonOrFail(ctx, config)
@@ -149,7 +149,7 @@ func Build(ctx Context, config Config, what int) {
 	}
 
 	// Check the java versions we read earlier
-	checkJavaVersion(ctx, config)
+	//checkJavaVersion(ctx, config)
 
 	if what&BuildKati != 0 {
 		// Run ckati
